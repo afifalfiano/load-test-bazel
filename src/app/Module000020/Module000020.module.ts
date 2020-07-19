@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { My000040Component } from './my.000040.component';
+import { My000041Component } from './my.000041.component';
 
 @NgModule({
   declarations: [
     My000040Component,
+    My000041Component,
   ],
   imports: [CommonModule],
   exports: [
