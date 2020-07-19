@@ -3,6 +3,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+<<<<<<< HEAD
 import { My000052Component } from './my.000052.component';
 import { My000053Component } from './my.000053.component';
 
@@ -14,6 +15,17 @@ import { My000053Component } from './my.000053.component';
   imports: [CommonModule],
   exports: [
     My000052Component,
+=======
+import { My000046Component } from './my.000046.component';
+
+@NgModule({
+  declarations: [
+    My000046Component,
+  ],
+  imports: [CommonModule],
+  exports: [
+    My000046Component,
+>>>>>>> 4946175... bazel with angular stress test
   ]
 })
 export class Module000026 { }
