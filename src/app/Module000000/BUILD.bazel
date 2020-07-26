@@ -1,0 +1,26 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@npm_angular_bazel//:index.bzl", "ng_module")
+
+ng_module(
+    name = "Module000000",
+    srcs = [
+  "Module000000.module.ts",
+  "my.000000.component.ts",
+  "my.000001.component.ts",
+  "my.000002.component.ts"
+],
+    assets = [
+  "my.000000.component.html",
+  "my.000001.component.html",
+  "my.000002.component.html"
+],
+    deps = [
+        "@npm//@angular/core",
+        "@npm//@angular/platform-browser",
+        "@npm//@angular/router",
+        "@npm//@types",
+        "@npm//rxjs",
+    ],
+)
+
