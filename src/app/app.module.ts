@@ -20,8 +20,8 @@ import { TimerModule } from './timer/timer.module';
     Module000000,
     Module000001,
     DataTableModule,
-    AppRoutingModule,
-    TimerModule
+    TimerModule,
+    AppRoutingModule
 ],
   bootstrap: [
     AppComponent
