@@ -47,9 +47,11 @@ ng_module(
         "@npm//@angular/material",
         "@npm//@types",
         "@npm//rxjs",
+        "@npm//moment",
         "//src/app/Module000000",
         "//src/app/Module000001",
-        "//src/app/data-table"
+        "//src/app/data-table",
+        "//src/app/timer"
         # "//src/app/module-lazy-load"
     ],
 )
@@ -111,10 +113,14 @@ ts_devserver(
         ":global_stylesheet",
     ],
     data = [
+        "@npm//:node_modules/moment/moment.js",
         "favicon.ico",
     ],
     index_html = "index.html",
-    deps = [":src"],
+    deps = [
+        "require.config.js",
+        ":src"
+        ],
 )
 
 ts_library(
