@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Module000000 } from './Module000000/Module000000.module';
 import { Module000001 } from './Module000001/Module000001.module';
-
+import { DataTableModule } from './data-table/data-table.module';
 
 
 @NgModule({
@@ -18,6 +18,7 @@ import { Module000001 } from './Module000001/Module000001.module';
     BrowserModule,
     Module000000,
     Module000001,
+    DataTableModule,
     AppRoutingModule
 ],
   bootstrap: [

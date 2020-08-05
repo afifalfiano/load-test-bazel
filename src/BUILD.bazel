@@ -7,11 +7,15 @@ load("@build_bazel_rules_nodejs//internal/web_package:web_package.bzl", "web_pac
 load("@npm_bazel_typescript//:index.bzl", "ts_devserver", "ts_library")
 load("@io_bazel_rules_sass//:defs.bzl", "multi_sass_binary", "sass_binary")
 
+_ASSETS = [
+    "@npm//:node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
+]
 sass_binary(
   name = "global_stylesheet",
   src = glob(["styles.css", "styles.scss"])[0],
   output_name = "global_stylesheet.css",
 )
+
 
 multi_sass_binary(
     name = "styles",
@@ -40,10 +44,12 @@ ng_module(
         "@npm//@angular/core",
         "@npm//@angular/platform-browser",
         "@npm//@angular/router",
+        "@npm//@angular/material",
         "@npm//@types",
         "@npm//rxjs",
         "//src/app/Module000000",
         "//src/app/Module000001",
+        "//src/app/data-table"
         # "//src/app/module-lazy-load"
     ],
 )
@@ -58,7 +64,8 @@ rollup_bundle(
         "//src",
         "@npm//@angular/router",
         "@npm//rxjs",
-    ],
+
+    ]
 )
 
 web_package(
@@ -99,7 +106,7 @@ ts_devserver(
         "@npm//:node_modules/tslib/tslib.js",
         ":rxjs_umd_modules",
     ],
-    static_files = [
+    static_files = _ASSETS + [
         "@npm//:node_modules/zone.js/dist/zone.min.js",
         ":global_stylesheet",
     ],
