@@ -10,11 +10,11 @@ import * as moment from 'moment';
 })
 export class TimerComponent implements OnInit {
   // moments = moment();
-  timeNow: any;
+  timeNow;
   constructor() { }
 
   ngOnInit() {
-    this.timeNow = moment.format('LLLL');
+    this.timeNow = moment().format('LLLL');
   }
 
 }
