@@ -9,8 +9,8 @@ import * as moment from 'moment';
   styleUrls: ['./timer.component.css']
 })
 export class TimerComponent implements OnInit {
-  // moment : moment;
-  timeNow: string = moment().format('LLLL');
+  moments = moment();
+  timeNow = this.moments.format('LLLL');
   constructor() { }
 
   ngOnInit() {
