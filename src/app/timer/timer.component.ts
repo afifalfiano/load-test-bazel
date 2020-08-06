@@ -10,7 +10,7 @@ import * as moment from 'moment';
 })
 export class TimerComponent implements OnInit {
   // moments = moment();
-  timeNow: string;
+  timeNow: any;
   constructor() { }
 
   ngOnInit() {
