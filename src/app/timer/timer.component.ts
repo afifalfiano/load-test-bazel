@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // tslint:disable-next-line:import-spacing
-import * as moment from 'moment';
+import * as moment_ from 'moment';
+const moment = moment_;
 
 
 @Component({
@@ -14,7 +15,7 @@ export class TimerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.timeNow = moment().format('LLLL');
+    this.timeNow = moment.format('LLLL');
   }
 
 }
