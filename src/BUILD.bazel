@@ -66,6 +66,8 @@ rollup_bundle(
         "//src",
         "@npm//@angular/router",
         "@npm//rxjs",
+        "@npm//@angular/material",
+        "@npm//moment"
 
     ]
 )
